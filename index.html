@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Unofficial SonyLIV-inspired India vs New Zealand cricket match landing page concept.">
+<title>India vs New Zealand | Sony LIV Fan Concept</title>
+<style>
+:root{--bg:#080910;--panel:#151725;--muted:#aeb2c3;--pink:#ed1b75;--purple:#6b35c8;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--white)}
+a{color:inherit;text-decoration:none}
+header{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 7%;background:#090a12;position:relative;z-index:2;border-bottom:1px solid #252638}
+.brand{font-size:30px;font-weight:900;letter-spacing:-1.5px}
+.brand span{background:linear-gradient(90deg,#ffcf35,#f52b83,#7b55e8);-webkit-background-clip:text;background-clip:text;color:transparent}
+nav{display:flex;gap:28px;color:#e4e4eb;font-size:14px}
+nav a:hover{color:#ff4d9a}
+.header-actions{display:flex;align-items:center;gap:16px}
+.lang{color:#ddd;font-size:13px}
+.login{background:linear-gradient(100deg,var(--pink),var(--purple));border:0;border-radius:5px;padding:11px 20px;color:white;font-weight:bold;cursor:pointer}
+.hero{min-height:610px;display:flex;align-items:center;padding:70px 8%;background:linear-gradient(90deg,rgba(5,6,14,.98) 0%,rgba(5,6,14,.84) 45%,rgba(5,6,14,.15) 100%),linear-gradient(0deg,#080910 0%,transparent 38%),url('https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=2000&q=85') center/cover}
+.hero-content{max-width:650px}
+.eyebrow{display:inline-block;color:#ff5ca2;font-size:13px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
+h1{font-size:clamp(38px,6vw,70px);line-height:1.04;margin-bottom:18px;letter-spacing:-2px}
+.subtitle{font-size:18px;color:#d5d6df;line-height:1.6;margin-bottom:28px}
+.match-meta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.pill{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:30px;padding:9px 14px;font-size:13px}
+.teams{display:flex;align-items:center;gap:22px;margin:28px 0}
+.team{display:flex;align-items:center;gap:12px;font-size:20px;font-weight:bold}
+.flag{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#111;font-size:25px;box-shadow:0 4px 20px #0008}
+.vs{font-size:14px;color:#ff70ad;font-weight:bold}
+.cta{display:inline-block;background:linear-gradient(100deg,var(--pink),var(--purple));padding:15px 25px;border-radius:5px;font-weight:bold;box-shadow:0 8px 30px #a51b7655}
+.cta:hover,.login:hover{filter:brightness(1.12)}
+main{max-width:1200px;margin:auto;padding:48px 6%}
+.section-title{font-size:25px;margin-bottom:22px}
+.match-card{background:linear-gradient(120deg,#1a1c30,#171326);border:1px solid #34334a;border-radius:14px;padding:28px;display:grid;grid-template-columns:1.3fr 1fr;gap:25px;align-items:center}
+.card-label{color:#ff70ad;text-transform:uppercase;font-size:12px;font-weight:bold;letter-spacing:1.5px;margin-bottom:12px}
+.match-card h2{font-size:27px;margin-bottom:12px}
+.details{color:var(--muted);line-height:1.9;font-size:14px}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.timebox{background:#090b15;border:1px solid #37354e;border-radius:9px;text-align:center;padding:16px 8px}
+.timebox strong{display:block;font-size:30px;color:#ff5ca2}
+.timebox span{font-size:11px;color:#aeb2c3;text-transform:uppercase}
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:25px}
+.info{background:var(--panel);padding:22px;border-radius:10px;border:1px solid #282a3c}
+.info .icon{font-size:25px;margin-bottom:12px}
+.info h3{font-size:17px;margin-bottom:8px}
+.info p{font-size:13px;color:var(--muted);line-height:1.6}
+.notice{margin-top:28px;padding:15px 18px;border-left:3px solid var(--pink);background:#141321;color:#c6c6d2;font-size:12px;line-height:1.6}
+footer{border-top:1px solid #262738;text-align:center;padding:25px;color:#8f91a2;font-size:12px;line-height:1.8}
+@media(max-width:760px){
+ header{padding:0 5%;height:68px}.brand{font-size:25px}nav{display:none}.lang{display:none}
+ .hero{min-height:620px;padding:55px 6%;background-position:60% center}
+ .hero-content{max-width:100%}.subtitle{font-size:16px}.teams{gap:12px}.team{font-size:16px;gap:8px}.flag{width:40px;height:40px;font-size:21px}
+ .match-card{grid-template-columns:1fr;padding:22px}.info-grid{grid-template-columns:1fr}.countdown{gap:7px}.timebox strong{font-size:24px}
+}
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href="#"><span>SONY</span> LIV</a>
+  <nav><a href="#home">Home</a><a href="#match">Sports</a><a href="#details">Match Details</a></nav>
+  <div class="header-actions"><span class="lang">☷ English</span><button class="login" onclick="alert('Demo page: sign-in is not connected.')">Sign In</button></div>
+</header>
+
+<section class="hero" id="home">
+ <div class="hero-content">
+  <div class="eyebrow">International Cricket • 5th T20I</div>
+  <h1>INDIA vs<br>NEW ZEALAND</h1>
+  <p class="subtitle">One more battle. One big finish. Catch the final T20I of the series in this SonyLIV-inspired fan page concept.</p>
+  <div class="match-meta">
+   <span class="pill">🏏 5th T20 International</span>
+   <span class="pill">📅 01 November 2026</span>
+   <span class="pill">🕧 12:30 PM IST</span>
+  </div>
+  <div class="teams">
+   <div class="team"><span class="flag">🇮🇳</span> INDIA</div>
+   <span class="vs">VS</span>
+   <div class="team"><span class="flag">🇳🇿</span> NEW ZEALAND</div>
+  </div>
+  <a class="cta" href="#match">VIEW MATCH DETAILS&nbsp; →</a>
+ </div>
+</section>
+
+<main>
+ <section id="match">
+  <h2 class="section-title">The next big match</h2>
+  <div class="match-card">
+   <div>
+    <div class="card-label">Upcoming • 5th T20I</div>
+    <h2>New Zealand vs India</h2>
+    <p class="details">Sunday, 1 November 2026<br>12:30 PM Indian Standard Time<br>Seddon Park, Hamilton, New Zealand</p>
+   </div>
+   <div>
+    <div class="card-label">Match countdown (IST)</div>
+    <div class="countdown">
+     <div class="timebox"><strong id="days">--</strong><span>Days</span></div>
+     <div class="timebox"><strong id="hours">--</strong><span>Hours</span></div>
+     <div class="timebox"><strong id="minutes">--</strong><span>Minutes</span></div>
+     <div class="timebox"><strong id="seconds">--</strong><span>Seconds</span></div>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <section id="details" style="padding-top:42px">
+  <h2 class="section-title">Match centre</h2>
+  <div class="info-grid">
+   <article class="info"><div class="icon">🏟️</div><h3>Venue</h3><p>Seddon Park<br>Hamilton, New Zealand</p></article>
+   <article class="info"><div class="icon">⏰</div><h3>Match time</h3><p>12:30 PM IST<br>Sunday, 1 November 2026</p></article>
+   <article class="info"><div class="icon">🏆</div><h3>Series</h3><p>India tour of New Zealand 2026<br>5-match T20I series</p></article>
+  </div>
+  <div class="notice">Unofficial student project / fan-made landing page. This is not the official SonyLIV website and is not affiliated with Sony. No live stream, ticket booking, login, or live score service is provided. Match information is based on the published 2026 tour schedule and may change.</div>
+ </section>
+</main>
+
+<footer>SONY LIV-inspired UI practice project · Built with HTML, CSS and JavaScript<br>External background image requires an internet connection.</footer>
+
+<script>
+// Match start: 1 November 2026, 12:30 PM India time (UTC+05:30)
+const matchDate = new Date('2026-11-01T12:30:00+05:30').getTime();
+function updateCountdown(){
+ const now=Date.now();
+ let distance=matchDate-now;
+ if(distance<=0){
+  document.getElementById('days').textContent='00';
+  document.getElementById('hours').textContent='00';
+  document.getElementById('minutes').textContent='00';
+  document.getElementById('seconds').textContent='00';
+  document.querySelector('.card-label').textContent='Match time reached';
+  return;
+ }
+ const d=Math.floor(distance/86400000);
+ const h=Math.floor((distance%86400000)/3600000);
+ const m=Math.floor((distance%3600000)/60000);
+ const s=Math.floor((distance%60000)/1000);
+ document.getElementById('days').textContent=String(d).padStart(2,'0');
+ document.getElementById('hours').textContent=String(h).padStart(2,'0');
+ document.getElementById('minutes').textContent=String(m).padStart(2,'0');
+ document.getElementById('seconds').textContent=String(s).padStart(2,'0');
+}
+updateCountdown();
+setInterval(updateCountdown,1000);
+</script>
+</body>
+</html>
